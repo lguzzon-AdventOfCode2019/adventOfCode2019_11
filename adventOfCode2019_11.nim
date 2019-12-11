@@ -191,13 +191,11 @@ proc partOne =
 
   while true:
     runProgram(lMachine)
-    echo lMachine.status
     case lMachine.status
       of ready:
         break
       of waitInput:
         while lMachine.output.len > 0:
-          echo lMachine.output
 
           lPainted.incl(lRobotPosition)
           if lMachine.output.pop == 1:
